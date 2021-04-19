@@ -1,0 +1,10 @@
+.required-asterisk{
+    color:red
+}
+h1{
+    margin-left: 40%;
+}
+::ng-deep .pi-sort:before {
+    content: "\e915";
+    color: white;
+}
