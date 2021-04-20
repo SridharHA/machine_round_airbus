@@ -62,7 +62,7 @@ exports.handler = async (event, context) => {
 
     // Fetch records from db if authentication is successful
     if (authenticateResult) {
-        let requestResult = await axios.get(`https://o365wisq43.execute-api.us-east-1.amazonaws.com/dev/users?email=${email}&role=${role}`,
+        let requestResult = await axios.get(`https://23f1ap2itc.execute-api.us-east-1.amazonaws.com/dev/users?email=${email}&role=${role}`,
             { headers: { 'Authorization': token } })
             .then(function (response) {
                 // handle success

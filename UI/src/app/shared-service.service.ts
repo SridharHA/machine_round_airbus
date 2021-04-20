@@ -14,14 +14,14 @@ export class SharedServiceService {
   // Http call to signup
   signUpService(user){
     console.log(user);
-    return this.http.post("https://5d1swfvz83.execute-api.us-east-1.amazonaws.com/dev/signup",JSON.stringify(user)).pipe(
+    return this.http.post("https://7r5gc1m2ik.execute-api.us-east-1.amazonaws.com/dev/signup",JSON.stringify(user)).pipe(
       catchError(this.userServiceError)
     );
   }
 
   // Http call to signin and fetch user records
   signInService(email,password,role){
-    return this.http.get(`https://bpfpsrb2k8.execute-api.us-east-1.amazonaws.com/dev/signin?email=${email}&password=${password}&role=${role}`).pipe(
+    return this.http.get(`https://ef0ur0pldc.execute-api.us-east-1.amazonaws.com/dev/signin?email=${email}&password=${password}&role=${role}`).pipe(
       catchError(this.userServiceError)
     );
   }
