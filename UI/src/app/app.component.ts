@@ -15,7 +15,8 @@ import * as moment from 'moment';
   providers: [MessageService]
 })
 export class AppComponent implements OnInit {
- name:string = "sridhar";
+ name:any;
+ signUpResult:any;
  userform:FormGroup;
  loginScreen:boolean;
  adminScreen:boolean;
@@ -66,6 +67,7 @@ export class AppComponent implements OnInit {
     await this.sharedService.signUpService(signUpData).toPromise().then(response=>{
       let msg;
       msg=response;
+      this.signUpResult = msg;
       this.messageService.add({severity:'success', summary:'SignUp User', detail: msg.message});
       this.userform.reset();
     },error => {

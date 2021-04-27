@@ -12,10 +12,8 @@ export class LoaderComponent implements OnInit,OnDestroy{
   constructor(private loaderService: SharedServiceService) { }
 
   ngOnInit() {
-    console.log("called spinner")
     this.progressSpinnerCtrl = false;
     this.loaderService.loaderEmitter.subscribe(response => {
-      console.log("inside spinner",response)
       this.progressSpinnerCtrl = response;
     });
   }
